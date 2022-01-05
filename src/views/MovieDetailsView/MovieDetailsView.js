@@ -29,7 +29,7 @@ export default function MovieDetailsView() {
   }, [movieId]);
 
   const goBack = () => {
-    history.push(location?.state?.form ?? "/");
+    history.push(location?.state?.from ?? "/");
   };
   return (
     <>

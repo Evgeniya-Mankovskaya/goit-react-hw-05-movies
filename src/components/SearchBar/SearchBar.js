@@ -29,7 +29,6 @@ const SearchBar = ({ onClick }) => {
           <span className={s.buttonLabel}>Search</span> <GoSearch />
         </button>
         <input
-          // value="searchQuery"
           className={s.input}
           onChange={handleChange}
           type="text"
