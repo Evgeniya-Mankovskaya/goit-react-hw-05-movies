@@ -4,12 +4,20 @@ import AppBar from "./components/AppBar/AppBar";
 import Container from "./components/Container/Container";
 import Loader from "./components/Loader/Loader";
 
-const HomeView = lazy(() => import("./views/HomeView/HomeView"));
-const MoviesView = lazy(() => import("./views/MoviesView/MoviesView"));
-const MovieDetailsView = lazy(() =>
-  import("./views/MovieDetailsView/MovieDetailsView")
+const HomeView = lazy(() =>
+  import("./views/HomeView/HomeView" /* webpackChunkName: "home-view" */)
 );
-const NotFoundView = lazy(() => import("./views/NotFoundView"));
+const MoviesView = lazy(() =>
+  import("./views/MoviesView/MoviesView" /* webpackChunkName: "movies-view" */)
+);
+const MovieDetailsView = lazy(() =>
+  import(
+    "./views/MovieDetailsView/MovieDetailsView" /* webpackChunkName: "movie-details-view" */
+  )
+);
+const NotFoundView = lazy(() =>
+  import("./views/NotFoundView" /* webpackChunkName: "not-found-view" */)
+);
 
 function App() {
   return (
